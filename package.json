@@ -1,0 +1,22 @@
+{
+  "name": "bilalkezadri_6_14122021.github.io",
+  "version": "1.0.0",
+  "description": "Rien à installer ici, il suffit d'ouvrir le fichier `index.html`.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BKdevelopper/BilalKezadri_6_14122021.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BKdevelopper/BilalKezadri_6_14122021.github.io/issues"
+  },
+  "homepage": "https://github.com/BKdevelopper/BilalKezadri_6_14122021.github.io#readme",
+  "devDependencies": {
+    "eslint": "^8.7.0"
+  }
+}
