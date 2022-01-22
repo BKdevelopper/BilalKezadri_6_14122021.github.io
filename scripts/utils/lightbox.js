@@ -1,7 +1,6 @@
 export default class LightBox {
 
-    static init() {
-        console.log(document.querySelectorAll('a[href$=".jpg"], a[href$=".mp4"]'))
+    static init() {       
         const links = Array.from(document.querySelectorAll('a[href$=".jpg"], a[href$=".mp4"]'))
         const gallery = links.map(link => link.getAttribute('href'))
         links.forEach(link => link.addEventListener('click', e => {
@@ -32,8 +31,7 @@ export default class LightBox {
         loader.classList.add('lightbox__loader')
         container.innerHTML = ''
         container.appendChild(loader)
-        this.url = url
-        console.log(url.includes('.jpg'))
+        this.url = url        
         if(url.includes('.jpg')){
             const image = new Image()
             image.onload = () => {

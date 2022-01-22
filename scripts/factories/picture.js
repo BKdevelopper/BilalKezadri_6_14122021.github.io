@@ -34,8 +34,7 @@ let InsertNameOnContactForm = (DataPhotographeraById) => {
 }
 let SortingMedias = (DataMediaById) => {
 
-    const SelectDiv = document.getElementById('tri-select')
-    console.log(SelectDiv)
+    const SelectDiv = document.getElementById('tri-select')    
     const MediaBox = document.createElement('div')
     MediaBox.classList.add('photographe-container')
     MediaBoxImageOrVideo(MediaBox, DataMediaById)
@@ -46,8 +45,7 @@ let SortingMedias = (DataMediaById) => {
             MediaBox.innerHTML = ''
             let sortByLikes = DataMediaById.sort((a, b) => {
                 return b.likes - a.likes
-            })
-            console.log(sortByLikes)
+            })            
             MediaBoxImageOrVideo(MediaBox, sortByLikes)
             IncrementLikesAndTotalLikes()
             setTimeout(() => {
@@ -65,8 +63,7 @@ let SortingMedias = (DataMediaById) => {
                     return 1
                 }
                 return 0
-            })
-            console.log(sortByTitle)
+            })            
             MediaBoxImageOrVideo(MediaBox, sortByTitle)
             IncrementLikesAndTotalLikes()
             setTimeout(() => {
@@ -80,8 +77,7 @@ let SortingMedias = (DataMediaById) => {
                 a = new Date(a.date)
                 b = new Date(b.date)
                 return a > b ? -1 : a < b ? 1 : 0
-            })
-            console.log(sortByDates)
+            })            
             MediaBoxImageOrVideo(MediaBox, sortByDates)
             IncrementLikesAndTotalLikes()
             setTimeout(() => {
@@ -98,8 +94,7 @@ let SortingMedias = (DataMediaById) => {
 }
 
 
-let PhotographerBoxById = (DataPhotographeraById) => {
-    console.log(DataPhotographeraById)
+let PhotographerBoxById = (DataPhotographeraById) => {    
     const PhotographerBox = document.createElement('div')
     PhotographerBox.classList.add('profil-section_container')
     for (const element of DataPhotographeraById) {

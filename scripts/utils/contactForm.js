@@ -47,6 +47,8 @@ form.addEventListener('submit',
         e.preventDefault()  
         if(FormVerification()){
             closeModal()
+            const TextInputs = document.querySelectorAll('.text-control')
+            TextInputs.forEach(input => console.log(input.getAttribute('name'),' : ', input.value))
         } 
         
     })

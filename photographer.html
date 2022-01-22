@@ -43,14 +43,14 @@
           <div>
             <div class="formData">
               <label for="first">Prénom</label><br>
-              <input class="text-control" type="text" id="first" name="first" minlength="2" aria-required="true"
+              <input class="text-control" type="text" id="first" name="firstname" minlength="2" aria-required="true"
                 placeholder="Tony" required /><br>
               <span id="ErrorPrenom"
                 data-error="Veuillez entrées au moin 2 caractères ou plus (sans chiffre) pour le champ du prénom."></span>
             </div>
             <div class="formData">
               <label for="last">Nom</label><br>
-              <input class="text-control" type="text" id="last" name="last" minlength="2" aria-required="true"
+              <input class="text-control" type="text" id="last" name="lastname" minlength="2" aria-required="true"
                 placeholder="Parker" required /><br>
               <span id="ErrorNom"
                 data-error="Veuillez entrées au moin 2 caractères ou plus (sans chiffre) pour le champ du nom."></span>
@@ -62,7 +62,7 @@
               <span id="ErrorEmail" data-error="Veuillez entrer une adresse email valide."></span>
             </div>
             <label for="message">Message</label>
-            <textarea id="message" aria-required="true" name="message" placeholder="Votre message ..."></textarea>
+            <textarea id="message" class="text-control" aria-required="true" name="message" placeholder="Votre message ..."></textarea>
           </div>
           <button class="contact_button" type="submit">Envoyer</button>
          
