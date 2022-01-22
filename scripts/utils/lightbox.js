@@ -43,16 +43,16 @@ export default class LightBox {
             image.classList.add('lightbox__media')
             image.src = url
         }
-		if (url.includes('.mp4')) {
-			let video = document.createElement('video')
-			video.onloadeddata = () => {
-				container.removeChild(loader)
-				container.appendChild(video)
-			}
-			video.setAttribute('src', url)
-			video.setAttribute('controls', 'controls')
-			video.classList.add('lightbox__media')
-		}        
+        if(url.includes('.mp4')){
+            let video = document.createElement('video')
+            video.onloadeddata = () => {
+                container.removeChild(loader)
+                container.appendChild(video)
+            }
+            video.setAttribute('src', url)
+            video.setAttribute('controls', 'controls')
+            video.classList.add('lightbox__media')
+        }        
        
         let titleArray = []
         titles.forEach(title => {

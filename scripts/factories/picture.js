@@ -7,7 +7,7 @@ let VariableInitializationForFunction = async (jsonData) => {
     const DataMedia = data.media
     let str = document.location //permet de récupérer l'url de la page
     let url = new URL(str)
-    let id = url.searchParams.get("id")
+    let id = url.searchParams.get('id')
     setTimeout(() => {
         LightBox.init()
     }, 1000)
@@ -28,13 +28,13 @@ let InsertNameOnContactForm = (DataPhotographeraById) => {
     const Name = DataPhotographeraById.map(
         (elt) => elt.name
     )
-    const ContactNameDiv = document.getElementById("contact-name")
+    const ContactNameDiv = document.getElementById('contact-name')
     const InsertName = `<br>${Name}`
     ContactNameDiv.innerHTML += InsertName
 }
 let SortingMedias = (DataMediaById) => {
 
-    const SelectDiv = document.getElementById("tri-select")
+    const SelectDiv = document.getElementById('tri-select')
     console.log(SelectDiv)
     const MediaBox = document.createElement('div')
     MediaBox.classList.add('photographe-container')
@@ -42,55 +42,58 @@ let SortingMedias = (DataMediaById) => {
 
     SelectDiv.addEventListener('change', (event) => {
         switch (event.target.value) {
-            case 'likes':
-                MediaBox.innerHTML = ""
-                let sortByLikes = DataMediaById.sort((a, b) => {
-                    return b.likes - a.likes
-                })
-                console.log(sortByLikes)
-                MediaBoxImageOrVideo(MediaBox, sortByLikes)
-                IncrementLikesAndTotalLikes()
-                setTimeout(() => {
-                    LightBox.init()
-                }, 1000)
-                return MediaBox
-            case 'title':
-                MediaBox.innerHTML = ""
-                let sortByTitle = DataMediaById.sort((a, b) => {
-                    if (a.title < b.title) {
-                        return -1
-                    }
-                    if (a.title > b.title) {
-                        return 1
-                    }
-                    return 0
-                })
-                console.log(sortByTitle)
-                MediaBoxImageOrVideo(MediaBox, sortByTitle)
-                IncrementLikesAndTotalLikes()
-                setTimeout(() => {
-                    LightBox.init()
-                }, 1000)
-                return MediaBox
-            case 'date':
-                MediaBox.innerHTML = ""
-                let sortByDates = DataMediaById.sort(function (a, b) {
-                    a = new Date(a.date)
-                    b = new Date(b.date)
-                    return a > b ? -1 : a < b ? 1 : 0
-                })
-                console.log(sortByDates)
-                MediaBoxImageOrVideo(MediaBox, sortByDates)
-                IncrementLikesAndTotalLikes()
-                setTimeout(() => {
-                    LightBox.init()
-                }, 1000)
-                return MediaBox
-            default:
-                break
+        case 'likes': {
+            MediaBox.innerHTML = ''
+            let sortByLikes = DataMediaById.sort((a, b) => {
+                return b.likes - a.likes
+            })
+            console.log(sortByLikes)
+            MediaBoxImageOrVideo(MediaBox, sortByLikes)
+            IncrementLikesAndTotalLikes()
+            setTimeout(() => {
+                LightBox.init()
+            }, 1000)
+            return MediaBox
+        }            
+        case 'title': {
+            MediaBox.innerHTML = ''
+            let sortByTitle = DataMediaById.sort((a, b) => {
+                if (a.title < b.title) {
+                    return -1
+                }
+                if (a.title > b.title) {
+                    return 1
+                }
+                return 0
+            })
+            console.log(sortByTitle)
+            MediaBoxImageOrVideo(MediaBox, sortByTitle)
+            IncrementLikesAndTotalLikes()
+            setTimeout(() => {
+                LightBox.init()
+            }, 1000)
+            return MediaBox
+        }            
+        case 'date': {
+            MediaBox.innerHTML = ''
+            let sortByDates = DataMediaById.sort(function (a, b) {
+                a = new Date(a.date)
+                b = new Date(b.date)
+                return a > b ? -1 : a < b ? 1 : 0
+            })
+            console.log(sortByDates)
+            MediaBoxImageOrVideo(MediaBox, sortByDates)
+            IncrementLikesAndTotalLikes()
+            setTimeout(() => {
+                LightBox.init()
+            }, 1000)
+            return MediaBox
+        }           
+        default:
+            break
         }
     })
-    const PictureSectionDiv = document.querySelector(".picture_section")
+    const PictureSectionDiv = document.querySelector('.picture_section')
     PictureSectionDiv.appendChild(MediaBox)
 }
 
@@ -119,7 +122,7 @@ let PhotographerBoxById = (DataPhotographeraById) => {
         PhotographerBox.innerHTML += affichage
 
     }
-    const PhotographerSectionDiv = document.querySelector(".photographer-container")
+    const PhotographerSectionDiv = document.querySelector('.photographer-container')
     PhotographerSectionDiv.appendChild(PhotographerBox)
 }
 

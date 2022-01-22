@@ -14,8 +14,7 @@ let IdentityPhotographerBox = async (jsonData) => {
                 </a>   
             </div>                
             <div class="photographe-section_middle">
-                <p>${element.city}, ${element.country}</p> 
-                
+                <p>${element.city}, ${element.country}</p>                 
             </div>
             <div class="photographe-section_bottom">
                 <p>${element.tagline}</p> 
@@ -23,9 +22,9 @@ let IdentityPhotographerBox = async (jsonData) => {
             </div>    
         </div>
     `
-    PhotographerBox.innerHTML += affichage    
+        PhotographerBox.innerHTML += affichage    
     }
-    const PhotographersSectionDiv = document.querySelector(".photographer_section")
+    const PhotographersSectionDiv = document.querySelector('.photographer_section')
     PhotographersSectionDiv.appendChild(PhotographerBox)
 }
 
