@@ -1,0 +1,110 @@
+@import url("photographer.css");
+@import url("select.css");
+body {
+    font-family: "DM Sans", sans-serif;
+    margin: 0;
+    
+}
+
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+}
+
+h1 {
+    color: #901C1C;
+    margin-right: 100px;
+}
+
+.logo {
+    height: 50px;
+    margin-left: 100px;
+}
+
+
+.photographer_section article {
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.photographer_section article h2 {
+    color: #D3573C;
+    font-size: 36px;
+}
+
+.photographer_section article img {
+    height: 200px;
+    width: 200px;
+}
+
+.photographe-section_container {
+    
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 70px;
+    margin-top: 100px;
+    margin: auto;
+}
+.photographe-section_top h2{
+    font-size: 2.2rem;
+    font-weight: normal;
+    margin: 0;
+    color: #d3573c;
+    margin-top: 0.4em;
+}
+.photographe-section_top a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+}
+.photographe-section_top__picture {    
+    border-radius: 50%;
+    height: 15rem;
+    object-fit: cover;
+    position: relative;
+    width: 15rem;
+}
+
+.photographe-section_profil {
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1em;
+}
+.photographe-section_middle{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: -1.3em;
+    margin-top: -0.7em;
+}
+.photographe-section_middle p{
+    font-size: 0.9rem;
+    color: #901c1c;
+    text-align: center;
+}
+.photographe-section_bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.photographe-section_bottom p{
+    font-size: 0.6rem;
+}
+.photographe-section_bottom span{
+    font-size: 0.6rem;
+    color: #757575;
+    text-align: center;
+    margin-top: -1em;
+}

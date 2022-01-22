@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
+  <title>Fisheye - photographe </title>
+</head>
+
+<body>
+  <header role="banner">
+   
+      <div role="img" aria-label="Logo du site">
+        <a aria-label="Fisheye Home page" href="../index.html">
+        <img src="assets/images/logo.png" class="logo" alt="Fisheye Home page"/>
+      </a>
+      </div>      
+    
+  </header>
+  <main class="main">
+    <section class="photographe-infos" role="region" aria-label="Price and Total Like"></section>
+    <section class="photographer-container" role="region" aria-label="Photographer info"></section>
+    <section class="sort-container" role="region" aria-label="Sort Media">
+      <div class="sort-container-text">Trier par :</div>
+      <div class="selectdiv">
+        <label for="tri-select" class="label"><p style="display: none;">select</p></label>
+        <select name="tri" id="tri-select">
+          <option value="likes" selected>Popularité</option>
+          <option value="title">Nom</option>
+          <option value="date">Date</option>
+        </select>
+      </div>
+    </section>
+    <section class="picture_section" role="region" aria-label="Photographer media"></section>
+    <section id="contact_modal" role="region" aria-label="Photographer contact">
+      <div class="modal" aria-labelledby="contact" role="dialog">
+        <header>
+          <h2 id="contact-name">Contactez-moi</h2>
+          <img src="assets/icons/closewhite.svg" onclick="closeModal()" id="icon"/>
+        </header>
+        <form name="reserve" action="photographer.html" method="get" onsubmit="return validate();">
+          <div>
+            <div class="formData">
+              <label for="first">Prénom</label><br>
+              <input class="text-control" type="text" id="first" name="first" minlength="2" aria-required="true" placeholder="Tony" required /><br>
+              <span id="ErrorPrenom"
+                data-error="Veuillez entrées au moin 2 caractères ou plus (sans chiffre) pour le champ du prénom."></span>
+            </div>
+            <div class="formData">
+              <label for="last">Nom</label><br>
+              <input class="text-control" type="text" id="last" name="last" minlength="2" aria-required="true" placeholder="Parker" required /><br>
+              <span id="ErrorNom"
+                data-error="Veuillez entrées au moin 2 caractères ou plus (sans chiffre) pour le champ du nom."></span>
+            </div>
+            <div class="formData">
+              <label for="email">E-mail</label><br>
+              <input class="text-control" type="email" id="email" name="email" aria-required="true" placeholder="TonyPark@gmail.com" required /><br>
+              <span id="ErrorEmail" data-error="Veuillez entrer une adresse email valide."></span>
+            </div>
+            <label for="Message">Message</label>
+            <textarea id="message" aria-required="true" name="Message" placeholder="Votre message ..." ></textarea>
+          </div>
+          <button class="contact_button" type="submit">Envoyer</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="scripts/utils/lightbox.js" type="module"></script>
+  <script src="scripts/factories/picture.js" type="module"></script>
+  <script src="scripts/pages/photographer.js" type="module"></script>
+  <script src="scripts/utils/contactForm.js"></script>
+</body>
+
+</html>

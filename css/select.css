@@ -1,0 +1,55 @@
+.selectdiv {
+  position: relative;
+  float: left;
+  min-width: 200px;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.open .label::after {
+  content: '<';
+}
+
+.label::after {
+  content: '>';
+  font: 33px "Consolas", monospace;
+  color: white;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  right: 17px;
+  top: 25px;
+  padding: 0 0 2px;
+  position: absolute;
+  pointer-events: none;
+}
+
+.selectdiv select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+   display: block;
+  width: 100%;
+  max-width: 320px;
+  height: 80px;
+  float: right;
+  margin: 5px 0px;
+  padding: 0px 24px;
+  font-size: 16px;
+  line-height: 1.75;
+  color: white;
+  background-color: #901C1C;
+  background-image: none;
+  border: 1px solid #cccccc;
+  -ms-word-break: normal;
+  word-break: normal;
+  border-radius: 5px;
+  font-size: 1.125em;
+  font-family: inherit;
+  letter-spacing: 1px;
+  font-weight: bold;
+  cursor: pointer;
+}
